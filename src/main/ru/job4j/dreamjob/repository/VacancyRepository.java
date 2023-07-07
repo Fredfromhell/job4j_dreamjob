@@ -1,6 +1,6 @@
-package ru.job4j.dreamjob.repository;
+package src.main.ru.job4j.dreamjob.repository;
 
-import ru.job4j.dreamjob.model.Vacancy;
+import src.main.ru.job4j.dreamjob.model.Vacancy;
 
 import java.util.Collection;
 import java.util.Optional;
