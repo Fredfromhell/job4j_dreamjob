@@ -1,8 +1,11 @@
 package ru.job4j.dreamjob.model;
 
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@NoArgsConstructor
 public class Vacancy {
 
     private int id;
