@@ -1,5 +1,6 @@
 package ru.job4j.dreamjob.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,10 +11,11 @@ import ru.job4j.dreamjob.service.VacancyService;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@AllArgsConstructor
 @RequestMapping("/vacancies")
 public class VacancyController {
 
-    private final VacancyService vacancyService = SimpleVacancyService.getInstance();
+    private final VacancyService vacancyService;
 
     @GetMapping
     public String getAll(Model model) {
