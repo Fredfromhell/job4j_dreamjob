@@ -48,7 +48,7 @@ public class CandidateController {
             model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
             return "errors/404";
         }
-        return "redirect:/candidate";
+        return "redirect:/candidates";
     }
 
     @GetMapping("/delete/{id}")
@@ -58,6 +58,6 @@ public class CandidateController {
             model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
             return "errors/404";
         }
-        return "redirect:/candidate";
+        return "redirect:/candidates";
     }
 }
