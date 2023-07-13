@@ -38,7 +38,7 @@ public class VacancyController {
     public String getById(Model model, @PathVariable int id) {
         var vacancyOptional = vacancyService.findById(id);
         if (vacancyOptional.isEmpty()) {
-            model.addAttribute("message", "Вакансия с указанным идентификатором не найдена");
+            model.addAttribute("message", "Вакансия с указанным идентификатором не существует");
             return "errors/404";
         }
         model.addAttribute("vacancy", vacancyOptional.get());
