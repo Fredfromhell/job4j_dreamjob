@@ -3,6 +3,7 @@ package ru.job4j.dreamjob.repository;
 import org.springframework.stereotype.Repository;
 import ru.job4j.dreamjob.model.Candidate;
 
+import javax.annotation.concurrent.ThreadSafe;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Repository
+@ThreadSafe
 public class MemoryCandidateRepository implements CandidateRepository {
 
     private int nextId = 1;
@@ -17,12 +19,12 @@ public class MemoryCandidateRepository implements CandidateRepository {
     private final Map<Integer, Candidate> candidates = new HashMap<>();
 
     private MemoryCandidateRepository() {
-        save(new Candidate(0, "Джек Ричер", "Стажер", LocalDateTime.now()));
-        save(new Candidate(0, "Итан Хант", "Джуниор", LocalDateTime.now()));
-        save(new Candidate(0, "Джон Маклейн", "Джуниор+", LocalDateTime.now()));
-        save(new Candidate(0, "Капитан Джек Воробей", "Мидл", LocalDateTime.now()));
-        save(new Candidate(0, "Кларк Кент", "Мидл+", LocalDateTime.now()));
-        save(new Candidate(0, "Лекс Лютор", "СеньерПомидор", LocalDateTime.now()));
+        save(new Candidate(0, "Р”Р¶РµРє Р РёС‡РµСЂ", "РЎС‚Р°Р¶РµСЂ", LocalDateTime.now()));
+        save(new Candidate(0, "РС‚Р°РЅ РҐР°РЅС‚", "Р”Р¶СѓРЅРёРѕСЂ", LocalDateTime.now()));
+        save(new Candidate(0, "Р”Р¶РѕРЅ РњР°РєР»РµР№РЅ", "Р”Р¶СѓРЅРёРѕСЂ+", LocalDateTime.now()));
+        save(new Candidate(0, "РљР°РїРёС‚Р°РЅ Р”Р¶РµРє Р’РѕСЂРѕР±РµР№", "РњРёРґР»", LocalDateTime.now()));
+        save(new Candidate(0, "РљР»Р°СЂРє РљРµРЅС‚", "РњРёРґР»+", LocalDateTime.now()));
+        save(new Candidate(0, "Р›РµРєСЃ Р›СЋС‚РѕСЂ", "РЎРµРЅСЊРµСЂРџРѕРјРёРґРѕСЂ", LocalDateTime.now()));
     }
 
     @Override

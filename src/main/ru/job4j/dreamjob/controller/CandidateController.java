@@ -36,7 +36,7 @@ public class CandidateController {
     public String getById(Model model, @PathVariable int id) {
         var candidateOptional = candidateService.findById(id);
         if (candidateOptional.isEmpty()) {
-            model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
+            model.addAttribute("message", "РљР°РЅРґРёРґР°С‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅ");
             return "errors/404";
         }
         model.addAttribute("candidate", candidateOptional.get());
@@ -47,7 +47,7 @@ public class CandidateController {
     public String update(@ModelAttribute Candidate candidate, Model model) {
         var isUpdated = candidateService.update(candidate);
         if (!isUpdated) {
-            model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
+            model.addAttribute("message", "РљР°РЅРґРёРґР°С‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅ");
             return "errors/404";
         }
         return "redirect:/candidates";
@@ -57,7 +57,7 @@ public class CandidateController {
     public String delete(Model model, @PathVariable int id) {
         var isDeleted = candidateService.deleteById(id);
         if (!isDeleted) {
-            model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
+            model.addAttribute("message", "РљР°РЅРґРёРґР°С‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅ");
             return "errors/404";
         }
         return "redirect:/candidates";

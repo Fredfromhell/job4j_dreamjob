@@ -3,12 +3,14 @@ package ru.job4j.dreamjob.repository;
 import org.springframework.stereotype.Repository;
 import ru.job4j.dreamjob.model.Vacancy;
 
+import javax.annotation.concurrent.ThreadSafe;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 @Repository
+@ThreadSafe
 public class MemoryVacancyRepository implements VacancyRepository {
 
     private int nextId = 1;
@@ -16,12 +18,12 @@ public class MemoryVacancyRepository implements VacancyRepository {
     private final Map<Integer, Vacancy> vacancies = new HashMap<>();
 
     private MemoryVacancyRepository() {
-        save(new Vacancy(0, "Intern Java Developer", "Стажер", LocalDateTime.now()));
-        save(new Vacancy(0, "Junior Java Developer", "Джуниор", LocalDateTime.now()));
-        save(new Vacancy(0, "Junior+ Java Developer", "Джуниор+", LocalDateTime.now()));
-        save(new Vacancy(0, "Middle Java Developer", "Мидл", LocalDateTime.now()));
-        save(new Vacancy(0, "Middle+ Java Developer", "Мидл+", LocalDateTime.now()));
-        save(new Vacancy(0, "Senior Java Developer", "СеньерПомидор", LocalDateTime.now()));
+        save(new Vacancy(0, "Intern Java Developer", "РЎС‚Р°Р¶РµСЂ", LocalDateTime.now()));
+        save(new Vacancy(0, "Junior Java Developer", "Р”Р¶СѓРЅРёРѕСЂ", LocalDateTime.now()));
+        save(new Vacancy(0, "Junior+ Java Developer", "Р”Р¶СѓРЅРёРѕСЂ+", LocalDateTime.now()));
+        save(new Vacancy(0, "Middle Java Developer", "РњРёРґР»", LocalDateTime.now()));
+        save(new Vacancy(0, "Middle+ Java Developer", "РњРёРґР»+", LocalDateTime.now()));
+        save(new Vacancy(0, "Senior Java Developer", "РЎРµРЅСЊРµСЂРџРѕРјРёРґРѕСЂ", LocalDateTime.now()));
     }
 
     @Override

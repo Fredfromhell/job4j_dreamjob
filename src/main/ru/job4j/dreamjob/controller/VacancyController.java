@@ -8,9 +8,11 @@ import ru.job4j.dreamjob.model.Vacancy;
 import ru.job4j.dreamjob.service.SimpleVacancyService;
 import ru.job4j.dreamjob.service.VacancyService;
 
+import javax.annotation.concurrent.ThreadSafe;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@ThreadSafe
 @AllArgsConstructor
 @RequestMapping("/vacancies")
 public class VacancyController {
@@ -63,9 +65,5 @@ public class VacancyController {
             return "errors/404";
         }
         return "redirect:/vacancies";
-    }
-
-    public static void main(String[] args) {
-        System.out.println("Проверка");
     }
 }
