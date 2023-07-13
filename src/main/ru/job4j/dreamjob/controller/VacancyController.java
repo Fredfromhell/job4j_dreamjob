@@ -38,7 +38,7 @@ public class VacancyController {
     public String getById(Model model, @PathVariable int id) {
         var vacancyOptional = vacancyService.findById(id);
         if (vacancyOptional.isEmpty()) {
-            model.addAttribute("message", "Вакансия с указанным идентификатором не существует");
+            model.addAttribute("message", "Р’Р°РєР°РЅСЃРёСЏ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅР°");
             return "errors/404";
         }
         model.addAttribute("vacancy", vacancyOptional.get());
@@ -49,7 +49,7 @@ public class VacancyController {
     public String update(@ModelAttribute Vacancy vacancy, Model model) {
         var isUpdated = vacancyService.update(vacancy);
         if (!isUpdated) {
-            model.addAttribute("message", "Вакансия с указанным идентификатором не найдена");
+            model.addAttribute("message", "Р’Р°РєР°РЅСЃРёСЏ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅР°");
             return "errors/404";
         }
         return "redirect:/vacancies";
@@ -59,10 +59,13 @@ public class VacancyController {
     public String delete(Model model, @PathVariable int id) {
         var isDeleted = vacancyService.deleteById(id);
         if (!isDeleted) {
-            model.addAttribute("message", "Вакансия с указанным идентификатором не найдена");
+            model.addAttribute("message", "Р’Р°РєР°РЅСЃРёСЏ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅР°");
             return "errors/404";
         }
         return "redirect:/vacancies";
     }
 
+    public static void main(String[] args) {
+        System.out.println("РџСЂРѕРІРµСЂРєР°");
+    }
 }
