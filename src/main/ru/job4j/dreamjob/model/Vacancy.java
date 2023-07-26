@@ -20,5 +20,14 @@ public class Vacancy {
 
     private LocalDateTime creationDate;
 
+    private boolean visible;
+
+    public boolean getVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 }
 
