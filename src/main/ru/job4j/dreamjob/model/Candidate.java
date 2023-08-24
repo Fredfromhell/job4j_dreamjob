@@ -15,4 +15,7 @@ public class Candidate {
     private String name;
     private String description;
     private LocalDateTime creationDate;
+    private int cityId;
+
+
 }

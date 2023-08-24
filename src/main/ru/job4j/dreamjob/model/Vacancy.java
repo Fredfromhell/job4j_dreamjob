@@ -19,8 +19,9 @@ public class Vacancy {
     private String description;
 
     private LocalDateTime creationDate;
-
     private boolean visible;
+
+    private int cityId;
 
     public boolean getVisible() {
         return visible;
