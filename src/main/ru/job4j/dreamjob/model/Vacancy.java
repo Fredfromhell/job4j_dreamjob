@@ -22,6 +22,7 @@ public class Vacancy {
     private boolean visible;
 
     private int cityId;
+    private int fileId;
 
     public boolean getVisible() {
         return visible;
